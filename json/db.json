@@ -1,0 +1,41 @@
+{
+  "usersusers": [
+    {
+      "name": "test1",
+      "email": "test1@test.com",
+      "password": "MyPass777",
+      "id": 1
+    },
+    {
+      "name": "Jenna Yim",
+      "email": "test1@test.com",
+      "password": "1234567",
+      "id": 2
+    },
+    {
+      "email": "user02@user02.com",
+      "name": " Yim01",
+      "password": "1234567",
+      "id": 3
+    },
+    {
+      "email": "user02@user02.com",
+      "name": "Jenna Yim03",
+      "password": "asdfghj",
+      "id": 4
+    },
+    {
+      "email": "user02@user02.com",
+      "name": "Jenna Yim03",
+      "password": "asdfghjf",
+      "id": 5
+    },
+    {
+      "email": "user02@user02.com",
+      "name": "Jenna Yim03",
+      "password": "asdfghjf",
+      "id": 6
+    }
+  ],
+  "tasks": []
+}

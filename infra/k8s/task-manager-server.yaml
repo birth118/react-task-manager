@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-manager-server-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: task-manager-server
+  template:
+    metadata:
+      labels:
+        app: task-manager-server
+    spec:
+      containers:
+        - name: task-manager-server
+          image: birth118/task-manager-server
+          env:
+            - name: JWT_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: jwt-secret # ever used in kubectl create secret command
+                  key: JWT_SECRET
+            - name: MONGODB_URL
+              value: 'mongodb+srv://seongsoo-admin:happy2me@cluster0.72fbe.mongodb.net/task-manager-api-dev?retryWrites=true&w=majority'
+            - name: SENDGRID_API_KEY
+              value: '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'
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-manager-server-srv
+spec:
+  selector:
+    app: task-manager-server
+  ports:
+    - name: task-manager-server
+      protocol: TCP
+      port: 5000 # Express.js port
+      targetPort: 5000

@@ -1,0 +1,19 @@
+task.js:router.delete('/tasks/:id', auth, async (req, res) => {
+task.js:router.get('/tasks', auth, async (req, res) => {
+task.js:router.get('/tasks/:id', auth, async (req, res) => {
+task.js:router.patch('/tasks/:id', auth, async (req, res) => {
+task.js:router.post('/tasks', auth,
+
+user.js:router.delete('/users/me', auth, async (req, res) => {
+user.js:router.delete('/users/me/avatar', auth, async (req, res) => {
+
+user.js:router.get('/users/:id/avatar', async (req, res) => {
+user.js:router.get('/users/error', function (req, res, next) {
+user.js:router.get('/users/me', auth, async (req, res) => {
+user.js:router.patch('/users/me', auth, async (req, res) => {
+
+user.js:router.post('/users',
+user.js:router.post('/users/login',
+user.js:router.post('/users/logout', auth, async (req, res, next) => {
+user.js:router.post('/users/logoutAll', auth, async (req, res, next) => {
+user.js:router.post('/users/me/avatar', auth,

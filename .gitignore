@@ -1,0 +1,10 @@
+# client
+client/.DS_Store
+client/node_modules
+
+# server
+server/.DS_Store
+server/node_modules
+
+# json
+json/node_modules

@@ -1,0 +1,36 @@
+# apiVersion: skaffold/v2alpha3
+# kind: Config
+# deploy:
+#   kubectl:
+#     manifests:
+#       - ./infra/k8s/*
+apiVersion: skaffold/v2alpha3
+kind: Config
+deploy:
+  kubectl:
+    manifests:
+      - ./infra/k8s/* # for local cluster
+      # - ./infra/k8s-gke/* # for Google Cloud cluster
+      - ./infra/k8s-dev/* # for ingress dev environment
+build:
+  local:
+    push: false
+  # googleCloudBuild: # for Google Cloud
+  #   projectId: micro-ticketing-dev
+  artifacts:
+    - image: birth118/task-manager-server
+      context: server #Dockerfile location
+      docker:
+        dockerfile: Dockerfile
+      sync:
+        manual:
+          - src: 'src/**/*.js'
+            dest: .
+    # - image: us.gcr.io/micro-ticketing-dev/client
+    #   context: client
+    #   docker:
+    #     dockerfile: Dockerfile
+    #   sync:
+    #     manual:
+    #       - src: '**/*.js'
+    #         dest: .

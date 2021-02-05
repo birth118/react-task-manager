@@ -1,0 +1,44 @@
+x task.js:router.delete('/tasks/:id', auth, async (req, res) => {
+x task.js:router.get('/tasks', auth, async (req, res) => {
+task.js:router.get('/tasks/:id', auth, async (req, res) => {
+x task.js:router.patch('/tasks/:id', auth, async (req, res) => {
+x task.js:router.post('/tasks', auth,
+
+--> user.js:router.delete('/users/me', auth, async (req, res) => {
+user.js:router.delete('/users/me/avatar', auth, async (req, res) => {
+
+x user.js:router.get('/users/:id/avatar', async (req, res) => {
+x user.js:router.get('/users/error', function (req, res, next) {
+x user.js:router.get('/users/me', auth, async (req, res) => {
+user.js:router.patch('/users/me', auth, async (req, res) => {
+
+x user.js:router.post('/users',
+x user.js:router.post('/users/login',
+x user.js:router.post('/users/logout', auth, async (req, res, next) => {
+user.js:router.post('/users/logoutAll', auth, async (req, res, next) => {
+x user.js:router.post('/users/me/avatar', auth,
+
+
+client
+/register
+/login
+/logout
+
+reponse.data:
+    token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDBhNzJlMDY3MjgxMDdlMzhhNmE1NDEiLCJpYXQiOjE2MTE0MDI1Nzl9.-y-yYhdIa9lww9gg2yAyuSKq6acd7cXKeGMhG6pXEeI"
+    user:
+      age: 0
+      createdAt: "2021-01-22T06:38:24.474Z"
+      email: "test1@test.com"
+      name: "test1"
+      updatedAt: "2021-01-23T11:49:39.428Z"
+__v: 7
+_id: "600a72e06728107e38a6a541"
+__proto__: Object
+__proto__: Object
+
+err.reponse.data
+          errors: Array(1)
+              0: {message: "User already exists"}
+        length: 1
+        __proto__: Array(0)
