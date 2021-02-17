@@ -20,6 +20,7 @@ on:
       - master
     paths:
       - 'infra/**'
+      - 'server/**'
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
