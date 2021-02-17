@@ -70,7 +70,7 @@ jobs:
       #           chmod u+x ./kustomize
 
       # Deploy the Docker image to the GKE cluster
-      - run: ubectl apply -f ./infra/k8s-gke/task-manager-client.yaml
+      - run: kubectl apply -f ./infra/k8s-gke/task-manager-client.yaml
       - run: kubectl rollout restart deployment $DEPLOYMENT_NAME
       - run: kubectl get services -o wide
 #           ./kustomize edit set image gcr.io/PROJECT_ID/IMAGE:TAG=gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA
