@@ -25,7 +25,6 @@ spec:
               value: 'mongodb+srv://seongsoo-admin:happy2me@cluster0.72fbe.mongodb.net/task-manager-api-dev?retryWrites=true&w=majority'
             - name: SENDGRID_API_KEY
               value: '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'
-
 ---
 apiVersion: v1
 kind: Service
