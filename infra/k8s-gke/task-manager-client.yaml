@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tm-client
-          image: gcr.io/tm-61231/tm-client
+          image: gcr.io/tm-61231/tm-client@sha256:54229c9652dda9c7d67bbc807d8f9c50a2ac8a1fede285d265da9982daac6162
 
 ---
 apiVersion: v1

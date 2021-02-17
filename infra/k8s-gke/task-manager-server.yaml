@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tm-server
-          image: gcr.io/tm-61231/tm-server
+          image: gcr.io/tm-61231/tm-server@sha256:986dde167b2c42a4fef45ab8cd23f670ad72d034493fdaf234c32e3bca8d9f1e
           env:
             - name: JWT_SECRET
               valueFrom:
