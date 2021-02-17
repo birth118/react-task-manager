@@ -20,7 +20,6 @@ on:
       - master
     paths:
       - 'client/**'
-      - 'server/**'
 
 env:
   PROJECT_ID: ${{ secrets.GKE_PROJECT }}
