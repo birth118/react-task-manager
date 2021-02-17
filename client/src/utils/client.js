@@ -1,23 +1,7 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://localhost:5000"
-
-const clientUsers = axios.create({
-  baseURL: 'http://localhost:5000/users',
-  headers: {
-    'content-type': 'application/json'
-  }
-
-})
-
-const clientTasks = axios.create({
-  baseURL: 'http://localhost:5000/tasks',
-  headers: {
-    'content-type': 'application/json'
-  }
-
-})
-
+//axios.defaults.baseURL = "http://localhost:5000" // for local dev
+axios.defaults.baseURL = "/"    //for Kubernetes
 
 
 const client = axios.create({
@@ -29,5 +13,7 @@ const client = axios.create({
 })
 
 
+export {
 
-export { clientTasks, clientUsers, client }
+  client
+}

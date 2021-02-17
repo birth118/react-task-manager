@@ -9,16 +9,16 @@ kind: Config
 deploy:
   kubectl:
     manifests:
-      # - ./infra/k8s/* # for local cluster
-      - ./infra/k8s-gke/* # for Google Cloud cluster
+      - ./infra/k8s/* # for local cluster
+      # - ./infra/k8s-gke/* # for Google Cloud cluster
       - ./infra/k8s-dev/* # for ingress dev environment
 build:
-  # local:
-  #   push: false
-  googleCloudBuild: # for Google Cloud
-    projectId: tm-61231
+  local:
+    push: false
+  # googleCloudBuild: # for Google Cloud
+  #   projectId: micro-ticketing-dev
   artifacts:
-    - image: us.gcr.io/tm-61231/tm-server
+    - image: birth118/task-manager-server
       context: server #Dockerfile location
       docker:
         dockerfile: Dockerfile
@@ -26,7 +26,7 @@ build:
         manual:
           - src: 'src/**/*.js'
             dest: .
-    - image: us.gcr.io/tm-61231/tm-client
+    - image: birth118/task-manager-client
       context: client
       docker:
         dockerfile: Dockerfile

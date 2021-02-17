@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: server-depl
+  name: tm-server-depl
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: server
+      app: tm-server
   template:
     metadata:
       labels:
-        app: server
+        app: tm-server
     spec:
       containers:
-        - name: server
-          image: birth118/task-manager-server
+        - name: tm-server
+          image: us.gcr.io/tm-61231/tm-server
           env:
             - name: JWT_SECRET
               valueFrom:
@@ -30,12 +30,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: server-srv
+  name: tm-server-srv
 spec:
   selector:
-    app: server
+    app: tm-server
   ports:
-    - name: server
+    - name: tm-server
       protocol: TCP
       port: 5000 # Express.js port
       targetPort: 5000

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tm-client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tm-client
+  template:
+    metadata:
+      labels:
+        app: tm-client
+    spec:
+      containers:
+        - name: tm-client
+          image: us.gcr.io/tm-61231/tm-client
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tm-client-srv
+spec:
+  selector:
+    app: tm-client
+  ports:
+    - name: tm-client
+      protocol: TCP
+      port: 3000 # React port
+      targetPort: 3000
