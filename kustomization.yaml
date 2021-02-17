@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
   # - deployment.yml
   # - service.yml
-  - infra/k8s/task-manager-client.yaml
-  - infra/k8s/task-manager-server.yaml
+  - infra/k8s-gke/task-manager-client.yaml
+  - infra/k8s-gke/task-manager-server.yaml
