@@ -52,16 +52,16 @@ jobs:
           gcloud container clusters get-credentials "$GKE_CLUSTER" --zone "$GKE_ZONE"
 
       # Build the Docker image
-      - run: |-
-          docker build \
-            --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
-            --build-arg GITHUB_SHA="$GITHUB_SHA" \
-            --build-arg GITHUB_REF="$GITHUB_REF" \
-            server/
+      # - run: |-
+      #     docker build \
+      #       --tag "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA" \
+      #       --build-arg GITHUB_SHA="$GITHUB_SHA" \
+      #       --build-arg GITHUB_REF="$GITHUB_REF" \
+      #       server/
 
       # Push the Docker image to Google Container Registry
-      - run: |-
-          docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
+      # - run: |-
+      #     docker push "gcr.io/$PROJECT_ID/$IMAGE:$GITHUB_SHA"
 
       # Set up kustomize
       - run: |-
