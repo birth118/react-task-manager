@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tm-client
-          image: us.gcr.io/tm-61231/tm-client
+          image: gcr.io/tm-61231/tm-client$GITHUB_SHA
 
 ---
 apiVersion: v1

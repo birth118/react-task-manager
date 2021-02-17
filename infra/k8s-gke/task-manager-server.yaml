@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: tm-server
-          image: us.gcr.io/tm-61231/tm-server
+          image: gcr.io/tm-61231/tm-server$GITHUB_SHA
           env:
             - name: JWT_SECRET
               valueFrom:
